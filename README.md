@@ -21,8 +21,10 @@ This project demonstrates:
 - Managing data with **UserDefaults**  
 - Integrating **Firebase Firestore** for cloud storage  
 
-## 🎨 Screenshot  
-Simulator Screenshot – iPhone 17 Pro  
+## 🎨 Screenshot    
+<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2026-03-24 at 14 07 05" src="https://github.com/user-attachments/assets/ff8c5308-6351-4edc-a0e5-b1bb367d65de" />
+<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2026-03-24 at 14 07 17" src="https://github.com/user-attachments/assets/5305fde6-76b6-4324-9226-4f3fd0ed6afd" />
+
 
 ## 🚀 Learning Goals  
 This project was built to practice and demonstrate:  
