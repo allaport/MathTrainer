@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 final class TrainViewController: UIViewController {
     // MARK: - IBOutlets
@@ -39,8 +40,22 @@ final class TrainViewController: UIViewController {
         didSet {
             scoreLabel.text = "Score: \(count)"
             onScoreUpdate?(count)
-            // Sohranjaem
+            // Sohranjaem lokaljno
             UserDefaults.standard.set(count, forKey: type.key)
+            
+            // Sohranjaem v FireStore
+            let db = Firestore.firestore()
+            db.collection("results").addDocument(data: [
+                "operation": type.key,   // add / subtract / multiply / divide
+                "score": count,
+                "timestamp": Timestamp(date: Date())
+            ]) { error in
+                if let error = error {
+                    print("Ошибка сохранения в Firestore: \(error.localizedDescription)")
+                } else {
+                    print("✅ Результат сохранён в Firestore")
+                }
+            }
         }
     }
     

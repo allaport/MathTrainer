@@ -5,6 +5,7 @@
 //  Created by Macbook Pro on 11/13/24.
 //
 
+import FirebaseFirestore
 import UIKit
 
 enum MathTypes: Int, CaseIterable {
